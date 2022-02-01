@@ -183,6 +183,11 @@ class Helper(object):
         logging.info(
             f'Number of possible words after filtering: {len(self.words)}'
             )
+        if len(self.words) == 0:
+            logging.info(
+                f'No words possible given the input parameters.'
+                )
+            return None
         if len(self.words) < 11:
             logging.info(
                 f'Low amount of words! Here is what is possible: {self.words}'

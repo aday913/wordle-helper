@@ -6,6 +6,15 @@ from itertools import combinations
 
 class Helper(object):
     '''
+    Helper bot that, when given the current state of a Wordle daily challenge,
+    will print/return the next best word to try.
+
+    Input params:
+    state       = string of len 5 for the current game state (ie '_a_es')
+    letters     = list of letters known to be in solution and which locations
+                    we know they are not in (0-index)
+    nonLetters  = letters known not to be in the solution
+    debug       = bool for debugging, defaults to False
     '''
 
     def __init__(self, state, letters, nonletters, debug):
@@ -124,7 +133,9 @@ class Helper(object):
 
     def analyzePossibleLetters(self):
         '''
-        
+        Given the set of possible words, the method will determine how frequent 
+        each letter can be found in the set. It will then return the dictionary 
+        of values.
         '''
         numWords = len(self.words)
         alphabet = [
@@ -173,7 +184,8 @@ class Helper(object):
 
     def run(self):
         '''
-        
+        Main helper bot functionality. Will first filter out all non-possible
+        words, then find the next best word given and return it.
         '''
         # First let's filter out all non-possible words
         self.filterState()

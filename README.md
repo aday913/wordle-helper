@@ -9,7 +9,7 @@ Example input:
 C:path> python helper.py -s _o___ -k c4 -n arsetni
 ```
 
-In the above example, we know the "o" is in the second letter location, that there is a "c" in the solution but that it isn't in location 5 (0-index), and that non of the letters in "arsetni" are in the final solution.  
+In the above example, we know the "o" is in the second letter location, that there is a "c" in the solution but that it isn't in location 5 (0-index), and that none of the letters in "arsetni" are in the final solution.  
 
 Given these inputs, the following output would be expected:  
 
